@@ -77,6 +77,11 @@ public class SourceGenerator extends Base {
     public static final String WEB_BASE_PATH = "src/test/main/resources/templates/";
 
     /**
+     * 使用步骤：
+     * 1.先使用hibernate tool根据数据库中的文件生成实体类
+     * 2.将生成的实体类拷贝到publiccms-common中
+     * 3.调用本方法生成此实体相关的代码
+     * 4.将生成的代码拷贝至publiccms中。
      * @param arg
      * @throws ClassNotFoundException
      * @throws IOException
@@ -85,12 +90,17 @@ public class SourceGenerator extends Base {
         SourceGenerator sourceGenerator= new SourceGenerator();
         boolean overwrite = false;// 是否覆盖已有代码
         String basePackage = "org.publiccms";// 基础包名
+        
+        // 此处需要生成代码的实体类需要放入形如 org.publiccms.entities.xxx的包中
+        //sourceGenerator.generate(basePackage, "xxx", overwrite);
+        
         // 生成所有实体类的代码
         // sourceMaker.generate(basePackage, overwrite);
         // 生成某个包所有实体类的代码
-        // sourceMaker.generate(basePackage, "trade", overwrite);
+        sourceGenerator.generate(basePackage, "cms", overwrite);
         // 生成某个实体类的代码
-        sourceGenerator.generate(Class.forName("org.publiccms.entities.cms.CmsDictionaryData"), basePackage, overwrite);
+        //sourceGenerator.generate(Class.forName("org.publiccms.entities.cms.CmsDictionaryData"), basePackage, overwrite);
+    
     }
 
     /**

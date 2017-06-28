@@ -60,8 +60,8 @@ public class ServicePlugin extends PluginAdapter {
                 // 增加备注信息
                 topLevelClazz.addFileCommentLine("/*");
                 topLevelClazz.addFileCommentLine("    this file generator by ServicePlugin");
-                topLevelClazz.addFileCommentLine("    @Author: xinlu");
-                topLevelClazz.addFileCommentLine("    @Email: 442559691@qq.com");
+                topLevelClazz.addFileCommentLine("    @Author: Yingbiao.Li");
+                topLevelClazz.addFileCommentLine("    @Email: helan_snow@126.com");
                 topLevelClazz.addFileCommentLine("*/");
                 topLevelClazz.addFileCommentLine("");
                 topLevelClazz.addFileCommentLine("");

@@ -1,6 +1,6 @@
 package ${base}.${servicePack};
 
-// Generated ${.now} by com.sanluan.common.generator.SourceGenerator
+// Generated ${.now} by com.publiccms.common.generator.SourceGenerator
 
 <#include "../include_imports/field_type.ftl">
 
@@ -12,8 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 <#include "../include_imports/dao.ftl">
 
-import com.sanluan.common.base.BaseService;
-import com.sanluan.common.handler.PageHandler;
+import com.publiccms.common.base.BaseService;
+import com.publiccms.common.handler.PageHandler;
 
 /**
  *

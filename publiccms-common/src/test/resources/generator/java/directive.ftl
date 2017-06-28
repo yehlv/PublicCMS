@@ -1,6 +1,6 @@
 package ${base}.${directivePack};
 
-// Generated ${.now} by com.sanluan.common.generator.SourceGenerator
+// Generated ${.now} by com.publiccms.common.generator.SourceGenerator
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 <#include "../include_imports/service.ftl">
 
 import org.publliccms.common.base.AbstractTemplateDirective;
-import com.sanluan.common.handler.RenderHandler;
+import com.publiccms.common.handler.RenderHandler;
 
 /**
  *

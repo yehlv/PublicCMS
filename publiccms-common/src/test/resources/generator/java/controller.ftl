@@ -1,9 +1,9 @@
 package ${base}.${controllerPack};
 
-// Generated ${.now} by com.sanluan.common.generator.SourceGenerator
+// Generated ${.now} by com.publiccms.common.generator.SourceGenerator
 
-import static com.sanluan.common.tools.RequestUtils.getIpAddress;
-import static com.sanluan.common.tools.JsonUtils.getString;
+import static com.publiccms.common.tools.RequestUtils.getIpAddress;
+import static com.publiccms.common.tools.JsonUtils.getString;
 import static org.apache.commons.lang3.StringUtils.join;
 
 import javax.servlet.http.HttpServletRequest;

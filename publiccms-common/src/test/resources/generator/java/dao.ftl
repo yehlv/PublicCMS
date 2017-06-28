@@ -1,6 +1,6 @@
 package ${base}.${daoPack};
 
-// Generated ${.now} by com.sanluan.common.generator.SourceGenerator
+// Generated ${.now} by com.publiccms.common.generator.SourceGenerator
 
 <#include "../include_imports/field_type.ftl">
 
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Repository;
 
 <#include "../include_imports/entity.ftl">
 
-import com.sanluan.common.base.BaseDao;
-import com.sanluan.common.handler.PageHandler;
-import com.sanluan.common.handler.QueryHandler;
+import com.publiccms.common.base.BaseDao;
+import com.publiccms.common.handler.PageHandler;
+import com.publiccms.common.handler.QueryHandler;
 
 /**
  *
