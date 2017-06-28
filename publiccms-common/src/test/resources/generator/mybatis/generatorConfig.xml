@@ -13,7 +13,9 @@
 		<!--自动生成分页查询函数，该分页是内存全量 -->
 		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
 		<!--自定义插件 -->
-		<plugin type="com.sanluan.common.generator.mybatis.ServicePlugin" />
+		<!-- <plugin type="com.sanluan.common.generator.mybatis.ServicePlugin" /> -->
+		<plugin type="com.publiccms.common.generator.mybatis.ServicePlugin" />
+		
 		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
 			<property name="searchString" value="Example$" />
 			<property name="replaceString" value="Query" />

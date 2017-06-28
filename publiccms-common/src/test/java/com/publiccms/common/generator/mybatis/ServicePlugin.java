@@ -118,7 +118,7 @@ public class ServicePlugin extends PluginAdapter {
                 m.addBodyLine("MultiDataSource.resetDataSourceName();");
                 topLevelClazz.addMethod(m);
             }
-            topLevelClazz.addImportedType("com.sanluan.common.datasource.MultiDataSource");
+            topLevelClazz.addImportedType("com.publiccms.common.datasource.MultiDataSource");
 
             services.add(topLevelClazz);
         }
