@@ -1,0 +1,18 @@
+<@_dictionaryData id=id><#assign a=object/></@_dictionaryData>
+<form method="post" action="cmsDictionaryData/save.do?callbackType=closeCurrent&navTabId=cmsDictionaryData/list" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+	<input name="id" type="hidden" value="${id!}" />
+	<div class="formBar">
+		<ul>
+			<li><button type="submit" class="buttonActive">保存</button></li>
+			<li><button type="button" class="button close">取消</button></li>
+		</ul>
+	</div>
+	<div class="pageContent">
+		<div class="pageFormContent" layoutH="56">
+			<dl>
+				<dt>文字：</dt>
+				<dd><input class="required" name="text" type="text" size="30" value="${(a.text)!}"/></dd>
+			</dl>
+		</div>
+	</div>
+</form>

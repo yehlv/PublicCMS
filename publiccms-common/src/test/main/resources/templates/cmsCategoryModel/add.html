@@ -1,0 +1,14 @@
+<@_categoryModel id=id><#assign a=object/></@_categoryModel>
+<form method="post" action="cmsCategoryModel/save.do?callbackType=closeCurrent&navTabId=cmsCategoryModel/list" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+	<input name="id" type="hidden" value="${id!}" />
+	<div class="formBar">
+		<ul>
+			<li><button type="submit" class="buttonActive">保存</button></li>
+			<li><button type="button" class="button close">取消</button></li>
+		</ul>
+	</div>
+	<div class="pageContent">
+		<div class="pageFormContent" layoutH="56">
+		</div>
+	</div>
+</form>

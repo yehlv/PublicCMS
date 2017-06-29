@@ -1,0 +1,50 @@
+<div class="pageHeader">
+	<form id="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+		<#include "../include_page/paramters.html"/>
+		<div class="searchBar">
+			<ul class="searchContent">
+			</ul>
+			<div class="subBar">
+				<ul>
+					<li><button type="submit" class="buttonActive">搜索</button></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</div>
+<@_sysAuthorized roleIds=admin.roles urls='cmsCategoryAttribute/add,cmsCategoryAttribute/delete'><#assign authorizedMap=map/></@_sysAuthorized>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+		<#if authorizedMap['cmsCategoryAttribute/add']>
+			<li><a href="cmsCategoryAttribute/add.html" target="navTab" rel="cmsCategoryAttribute/add"><i class="icon-plus-sign-alt icon-large"></i> 添加</a></li>
+			<li><a href="cmsCategoryAttribute/add.html?id={sid}" target="navTab" rel="cmsCategoryAttribute/edit"><i class="icon-edit icon-large"></i> 修改</a></li>
+		</#if>
+		<#if authorizedMap['cmsCategoryAttribute/delete']>
+			<li><a href="cmsCategoryAttribute/delete.do" title="确定要删除该些记录吗?" target="selectedTodo" rel="ids"><i class="icon-trash icon-large"></i> 批量删除</a></li>
+		</#if>
+		</ul>
+	</div>
+<@_categoryAttributeList 
+            pageIndex=pageNum count=numPerPage>
+	<table class="list" width="100%" layoutH="92">
+		<thead>
+			<tr>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<#list page.list as a>
+			<tr target="sid" rel="${a.id}">
+				<td>
+				<#if authorizedMap['cmsCategoryAttribute/delete']>
+					<a href="cmsCategoryAttribute/delete.do?ids=${a.id}" title="确定要删除这条记录么?"  target="ajaxTodo">删除</a>
+				</#if>
+				</td>
+			</tr>
+			</#list>
+		</tbody>
+	</table>
+	<#include "../include_page/page.html"/>
+</@_categoryAttributeList>
+</div>
